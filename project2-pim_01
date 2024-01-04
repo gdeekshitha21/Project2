@@ -1,0 +1,7 @@
+driver=webdriver.chrome()
+driver.get("http://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+forgot_password_link=driver.find_element_by_link_text("Forget password")
+forgot_password_link.click()
+if"forgot passwod" in driver.title:
+    print("Forgot passwod page is not displayed.")
+driver.quit()    
